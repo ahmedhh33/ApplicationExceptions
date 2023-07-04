@@ -19,7 +19,7 @@ namespace AplicationExceptions
             this.age = age;
         }
 
-        public static Boolean ValidatingStudens(Student[] students)
+        public static Boolean ValidatingStudens(Student[] students)//just throw exceptions
         {
             for(int i=0; i<students.Length; i++)
             {
@@ -40,9 +40,16 @@ namespace AplicationExceptions
         {
             return Validate(student);
         }
-        public static Boolean methode2(Student[] student)
+        public static Boolean methode2(Student[] student)//handeling method
         {
-            return methade1(student);
+            try
+            {
+                return methade1(student);
+            }catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
         }
     }
 }
