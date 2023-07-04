@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace AplicationExceptions
 {
-    public class SameRegistrationNumberExceptions:ApplicationException
+     internal class SameRegistrationNumberExceptions : ApplicationException
     {
-        public SameRegistrationNumberExceptions(string? message):base(message) 
+        Student A { get; set; }
+        Student B { get; set; }
+
+        public SameRegistrationNumberExceptions(Student A, Student B)
         {
-
+            this.A = A;
+            this.B = B;
         }
-
+        public override string ToString()
+        {
+           return $"{A.Name} and {B.Name} have same registration number with student ";
+        }
     }
 }
