@@ -25,8 +25,9 @@ namespace AplicationExceptions
             {
                 for(int j=i+1; j<students.Length; j++)
                 {
-                    if (students[i].registratonNumber == students[j].registratonNumber) 
-                        return false;
+                    if (students[i].registratonNumber == students[j].registratonNumber)
+                        //Write Throw message her
+                        throw new SameRegistrationNumberExceptions("The students have same registration number ");
                 }
             }
             return true;
