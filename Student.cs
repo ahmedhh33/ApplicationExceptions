@@ -27,7 +27,7 @@ namespace AplicationExceptions
                 {
                     if (students[i].registratonNumber == students[j].registratonNumber)
                         //Write Throw message her
-                        throw new SameRegistrationNumberExceptions("The students have same registration number ");
+                        throw new SameRegistrationNumberExceptions($"The students have same registration number with student {students[i].Name} and student {students[j].Name}  ");
                 }
             }
             return true;

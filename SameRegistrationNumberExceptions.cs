@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AplicationExceptions
 {
-    internal class SameRegistrationNumberExceptions:ApplicationException
+    public class SameRegistrationNumberExceptions:ApplicationException
     {
         public SameRegistrationNumberExceptions(string? message):base(message) 
         {
 
         }
+
     }
 }
