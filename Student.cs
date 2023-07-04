@@ -32,5 +32,17 @@ namespace AplicationExceptions
             }
             return true;
         }
+        public static Boolean Validate (Student[] student)
+        {
+            return ValidatingStudens(student);
+        }
+        public static Boolean methade1 (Student[] student)
+        {
+            return Validate(student);
+        }
+        public static Boolean methode2(Student[] student)
+        {
+            return methade1(student);
+        }
     }
 }

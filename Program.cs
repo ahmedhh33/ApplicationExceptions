@@ -11,7 +11,7 @@
                 new("qais","1122",32)
                 };
 
-            Console.WriteLine(Student.ValidatingStudens(students));
+            Console.WriteLine(Student.methode2(students));
         }
 
     }
